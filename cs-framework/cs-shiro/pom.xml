@@ -8,12 +8,15 @@
     <version>${version}</version>
   </parent>
  
+  <groupId>com.cs</groupId>
   <artifactId>cs-shiro</artifactId>
+  <version>${version}</version>
   <packaging>jar</packaging>
   <name>cs-shiro</name>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <start-class>com.cs.Application</start-class>
   </properties>
   
   <dependencies>
@@ -28,12 +31,6 @@
             <groupId>com.cs</groupId>
             <artifactId>cs-entity</artifactId>
             <version>${version}</version>
-            <!--  <exclusions>  
-		        <exclusion>  
-		            <groupId>org.springframework.boot</groupId>  
-		            <artifactId>spring-boot-starter-data-jpa</artifactId>  
-		        </exclusion>  
-		    </exclusions>   -->
          </dependency>
          
          

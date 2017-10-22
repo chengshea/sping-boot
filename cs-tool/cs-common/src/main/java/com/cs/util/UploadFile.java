@@ -14,7 +14,7 @@ import org.springframework.web.servlet.support.RequestContext;
 public class UploadFile {
 	 final static Logger       logger = LoggerFactory.getLogger(UploadFile.class);  
 	     //音频
-		 public static String load(MultipartFile file) {
+	 public static String load(MultipartFile file) {
 			// 原图
 			StringBuffer toUrl = new StringBuffer();
 		

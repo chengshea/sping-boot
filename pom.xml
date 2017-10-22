@@ -8,12 +8,11 @@
 
   <modules>
     <module>cs-framework</module>
-    <module>cs-shiro</module>
     <module>cs-tool</module>
   </modules>
   <packaging>pom</packaging>
   
-  <name>test-parent</name>
+  <name>cs-parent</name>
   
 
   <properties>
