@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cs.mapper.PermissionService">
+
+  <!--   <insert id="insert" parameterType="com.cs.model.CsPermission">
+        <selectKey resultType="java.lang.Integer" keyProperty="userId" keyColumn="userId">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into student(name,email,age,birthday) values(#{name},#{email},#{age},#{birthday})
+    </insert> -->
+
+    <select id="queryAll" resultType="com.cs.model.CsPermission">
+        select * from cs_permission order by  sort  asc; 
+    </select>
+    
+    <select id="loadUserResources" parameterType="java.util.HashMap" resultType="com.cs.model.CsPermission">
+        SELECT re.id,re.name,re.pid,re.url
+        FROM cs_permission re LEFT JOIN cs_role_permission rr
+        ON re.id = rr.rid
+        LEFT JOIN cs_user_role ur
+        ON rr.rid =ur.rid
+        WHERE ur.userId=#{userid}
+        <if test="type != null">
+            AND re.type= #{type}
+        </if>
+        GROUP BY re.id
+        ORDER BY re.sort ASC
+    </select>
+    
+    
+</mapper>

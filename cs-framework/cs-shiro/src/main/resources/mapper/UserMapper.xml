@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cs.mapper.UserService">
+
+   <!--  <insert id="insert" parameterType="com.cs.model.CsUser">
+        <selectKey resultType="java.lang.Integer" keyProperty="userId" keyColumn="userId">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into student(name,email,age,birthday) values(#{name},#{email},#{age},#{birthday})
+    </insert> -->
+
+    <select id="getById" resultType="com.cs.model.CsUser">
+        select * from student where userId = #{userId}
+    </select>
+    <select id="getByNickname" resultType="com.cs.model.CsUser">
+        SELECT * FROM cs_user where email=${username}
+    </select>
+</mapper>
