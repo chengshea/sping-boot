@@ -16,6 +16,7 @@
    <modules>
      <module>cs-shiro</module>
     <module>cs-ocr</module>
+    <module>cs-msc</module>
   </modules>
   
   
