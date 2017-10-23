@@ -20,13 +20,9 @@
 整合 mybaits+spring-boot-starter-data-jpa包冲突
 ```
  <dependency>
-			    <groupId>javax.persistence</groupId>
-			    <artifactId>persistence-api</artifactId>
-			    <version>1.0.2</version>
-		</dependency>
+		<groupId>javax.persistence</groupId>
+		<artifactId>persistence-api</artifactId>
+		<version>1.0.2</version>
+</dependency>
 ```
 
-单独打包
-```
-mvn clean install -pl cs-tool/cs-common -am -rf cs-framework/cs-ocr
-```

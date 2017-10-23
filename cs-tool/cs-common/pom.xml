@@ -14,7 +14,6 @@
 	<packaging>jar</packaging>
 
 	<name>cs-common</name>
-	<description>Demo project for Spring Boot</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -74,7 +73,7 @@
 			</dependency>
 		
 		
-			 <!--  接口 ui -->
+			 <!--  api ui -->
 			<dependency>
 				<groupId>io.springfox</groupId>
 				<artifactId>springfox-swagger2</artifactId>

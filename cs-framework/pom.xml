@@ -8,8 +8,9 @@
     <version>${version}</version>
   </parent>
 
+ <groupId>com.cs</groupId>
   <artifactId>cs-framework</artifactId>
-
+   <version>${version}</version>
   <name>cs-framework</name>
   <packaging>pom</packaging>
   
@@ -19,12 +20,5 @@
     <module>cs-msc</module>
   </modules>
   
-  
  
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
-  <dependencies>
-  </dependencies>
 </project>
