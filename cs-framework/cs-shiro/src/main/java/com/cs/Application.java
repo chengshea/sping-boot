@@ -32,7 +32,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @Configuration
 @ControllerAdvice
 @SpringBootApplication
-//@EnableWebMvc
 @MapperScan(basePackages = "com.cs.mapper")
 public class Application {
 

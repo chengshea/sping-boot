@@ -9,6 +9,7 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.session.Session;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.util.ByteSource;
+import org.springframework.stereotype.Service;
 
 import com.cs.mapper.PermissionService;
 import com.cs.mapper.UserService;
@@ -22,7 +23,7 @@ import java.util.Map;
 
 
 
-
+@Service
 public class CustomShiroRealm extends AuthorizingRealm {
 
     @Resource
