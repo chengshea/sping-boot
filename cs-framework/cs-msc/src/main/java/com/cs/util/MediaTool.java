@@ -7,8 +7,10 @@ import java.util.ArrayList;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Service;
 
 import com.cs.service.CallBack;
 import com.iflytek.cloud.speech.RecognizerListener;
@@ -18,15 +20,15 @@ import com.iflytek.cloud.speech.SpeechError;
 import com.iflytek.cloud.speech.SpeechRecognizer;
 import com.iflytek.cloud.speech.SpeechUtility;
 
-@Configuration
+
 public class MediaTool {
 	private static  Logger logger = LoggerFactory.getLogger(MediaTool.class);
 	
 	@Value("${MSC.ID}")
 	public String id;
 	
+	private CallBack  callb;
 	
-	CallBack  callb;
 	public MediaTool(CallBack cb) {
           callb=cb;
 	}

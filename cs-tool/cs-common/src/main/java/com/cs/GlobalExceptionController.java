@@ -18,11 +18,8 @@ public class GlobalExceptionController {
     public Message handleException(Exception e) {
       
         String msg = e.getMessage();
-        if (msg == null || msg.equals("")) {
-        	return new Message(0, "", "服务器出错");
-        }
         logger.error(msg);
-		return new Message(0, "", "叫后台小哥查日志");
+		return new Message(0, msg, "叫后台小哥查日志");
         
     }
 

@@ -14,11 +14,16 @@ import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 public class DynamicDataSource extends AbstractRoutingDataSource{
 	
-	/**
-	 * 本地线程共享对象
-	 */
+	
+	 //本地线程共享对象
 	private static final ThreadLocal<String> THREAD_LOCAL = new ThreadLocal<>();
 	
+	
+	public DynamicDataSource(DataSource defaultTargetDataSource, Map<String, DataSource> targetDataSources) {
+		super.setDefaultTargetDataSource(defaultTargetDataSource);
+        super.setTargetDataSources(new HashMap<>(targetDataSources));
+        super.afterPropertiesSet();
+	}
 
 	//数据源路由，此方用于产生要选取的数据源逻辑名称
 	@Override

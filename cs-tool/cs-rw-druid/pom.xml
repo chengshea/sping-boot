@@ -1,32 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.cs</groupId>
     <artifactId>cs-tool</artifactId>
     <version>${version}</version>
   </parent>
-
-  <artifactId>cs-rw-aop</artifactId>
-  <name>cs-rw-aop</name>
-  <packaging>jar</packaging>
+  <groupId>com.cs</groupId>
+  <artifactId>cs-rw-druid</artifactId>
+  <version>${version}</version>
+  <name>cs-rw-druid</name>
+  <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-  
-  
+ 
   <dependencies>
-    	 <dependency>
-			<groupId>com.zaxxer</groupId>
-			<artifactId>HikariCP</artifactId>
-		</dependency> 
-		
-		
-		<!--  <dependency>
+         <dependency>
 		   <groupId>com.alibaba</groupId>
 		   <artifactId>druid-spring-boot-starter</artifactId>
 		   <version>1.1.3</version>
-		</dependency> -->
+		</dependency>
 		
 		
 		   <dependency>
@@ -57,5 +52,4 @@
 			</plugin>
 		</plugins>
   </build>
-  
 </project>

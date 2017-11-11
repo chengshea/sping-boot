@@ -19,13 +19,12 @@ public class SwaggerConfig {
 	
     @Bean
     public Docket restApi() {
-        Docket docket = new Docket(DocumentationType.SWAGGER_2)
+    	return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.cs.controller"))//过滤的接口
                 .paths(PathSelectors.any())
                 .build();
-        return docket;
     }
 
     /**

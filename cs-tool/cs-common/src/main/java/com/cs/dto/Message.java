@@ -5,7 +5,7 @@ import java.util.Map;
 public class Message {
      
    private int status;	
-   private 	Map<String,Object>  data;
+   private 	Object data;
    private String msg;
    
    
@@ -15,7 +15,7 @@ public class Message {
 	public void setStatus(int status) {
 		this.status = status;
 	}
-	public Map<String, Object> getData() {
+	public Object getData() {
 		return data;
 	}
 	public void setData(Map<String, Object> data) {
@@ -33,9 +33,10 @@ public class Message {
 		this.data = data;
 		this.msg = msg;
 	}
-	public Message(int status, String string, String msg) {
+	public Message(int status, Object obj, String msg) {
 		this.status = status;
 		this.msg = msg;
+		this.data= obj;
 	}
 	   
    
