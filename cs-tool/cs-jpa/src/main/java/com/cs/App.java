@@ -2,6 +2,9 @@ package com.cs;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.cs.util.SnowflakeIdWorker;
 
 
 /**
@@ -19,4 +22,8 @@ public class App
 		 SpringApplication.run(App.class, args);
 	}
 	
+	@Bean 
+	public SnowflakeIdWorker  get(){
+		return new SnowflakeIdWorker(0,0);
+	}
 }

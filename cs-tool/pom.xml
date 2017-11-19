@@ -15,9 +15,10 @@
     
   <modules>
     <module>cs-common</module>
-    <module>cs-entity</module>
+    <module>cs-jpa</module>
     <module>cs-rw-aop</module>
     <module>cs-rw-druid</module>
+    <module>cs-email</module>
   </modules>
   
   

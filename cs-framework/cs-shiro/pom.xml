@@ -29,7 +29,7 @@
          
          <dependency>
             <groupId>com.cs</groupId>
-            <artifactId>cs-entity</artifactId>
+            <artifactId>cs-jpa</artifactId>
             <version>${version}</version>
          </dependency>
          
